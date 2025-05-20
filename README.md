@@ -17,7 +17,7 @@ Giao diện người dùng cho hệ thống quản lý trung tâm tiếng Anh c�
 - JavaScript (tự viết validation)
 
 ## 📷 Giao diện
-![Screenshot](./img/login.png)
+![Screenshot](./img/Login.png)
 
 ## 📁 Cấu trúc thư mục
 login.html
