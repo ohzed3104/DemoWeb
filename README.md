@@ -16,10 +16,8 @@ Giao diện người dùng cho hệ thống quản lý trung tâm tiếng Anh c�
 - CSS3 (custom + animation)
 - JavaScript (tự viết validation)
 ##Giao diện
-Login .png
-Register.png
-Forgotpass.png
-screenshot("./DemoWeb/img/Login.png")
+  ![Index](./Demoweb/img/Login.jpg)
+
 ## 📁 Cấu trúc thư mục
 login.html
 
