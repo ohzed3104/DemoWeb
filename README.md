@@ -8,17 +8,17 @@ Giao diện người dùng cho hệ thống quản lý trung tâm tiếng Anh c�
 - Chức năng quên mật khẩu
 - Hiển thị/ẩn mật khẩu
 - Responsive nhẹ
+- Thông báo kiểu alert trả data ở console
 - Giao diện hiện đại với floating label
-- Hiển thị thông báo đăng nhập đưa DATA ra console 
 
 ## 🛠️ Công nghệ sử dụng
 - HTML5
 - CSS3 (custom + animation)
 - JavaScript (tự viết validation)
-
-## 📷 Giao diện
-![Screenshot](./my-website/img/Login.png)
-
+##Giao diện
+Login .png
+Register.png
+Forgotpass.png
 ## 📁 Cấu trúc thư mục
 login.html
 
