@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="./script.js"></script>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KMA ECMS App</title>
+    <link rel="icon" type="img/png" href="https://actvn.edu.vn/Images/actvn_big_icon.png">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left"></div>
+
+        <div class="right">
+            <form id="form-1">
+
+                <div class="mg-t mg-b">
+                    <img class="relay img-central "
+                        src="https://cdn.haitrieu.com/wp-content/uploads/2021/10/Logo-Hoc-Vien-Ky-Thuat-Mat-Ma-ACTVN.png"
+                        alt="">
+                </div>
+
+                <div class="title-b  title-h">HỆ THỐNG QUẢN LÝ TRUNG TÂM TIẾNG ANH KMA</div>
+                <div>
+                    <div class="title">Đăng Nhập</div>
+                    <div class="form-group">
+                        <div class="user"><i class="fa-solid fa-user"></i></div>
+                        <input type="text"  name="fullname" id="fullname" placeholder="Tên đăng nhập" />
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <div class="pass"><i class="fa-solid fa-lock"></i></div>
+                        <input class="password-input" name="password" type="password" id="password" placeholder="Mật khẩu" />
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="actions">
+                        <label><input type="checkbox" class="toggle-password" onclick="togglePasswords()"> Hiển thị mật
+                            khẩu</label>
+                        <div class="right-option">
+                            <a href="/my-website/fg-pass.html">Quên mật khẩu</a>
+                            <div class="span">|</div>
+                            <a href="./register.html">Đăng ký</a>
+                        </div>
+                    </div>
+                    <button type="submit">Đăng nhập</button>
+                    <button class="sso-btn" type="button">Đăng nhập qua Gmail</button>
+                </div>
+                <div class="icon-app">
+                    <div class="app">
+
+
+                        <div class="icon-a">
+                            <i class="fa-brands fa-apple"></i>
+                            <div class="text-a1">App Store</div>
+                            <div class="text-a">
+                                TẢI APP TRÊN
+                            </div>
+                            <div class="boc-qr">
+                                <img src="./img/Ảnh chụp màn hình 2025-05-08 095438.png" alt="qr-code" class="qr-code">
+                                <div class="tech">SCAN ME</div>
+                            </div>
+                        </div>
+
+
+                        <div class="icon-g">
+                            <i class="fa-brands fa-google-play"></i>
+                            <div class="text-g">Google Play</div>
+                            <div class="text-b">
+                                TẢI APP TRÊN
+                            </div>
+                            <div class="boc-qrm">
+                                <img src="./img/Ảnh chụp màn hình 2025-05-08 095438.png" alt="qr-code" class="qr-codem">
+                                <div class="techm">SCAN ME</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lien-he">
+                    <div class="b-lh">
+                        <i class="fa-solid fa-headset lh-icon"></i>
+                        <div class="lh-text">TƯ VẤN VÀ HỖ TRỢ</div>
+                        <div class="sdt-lh">1900</div>
+                        <div class="lh-textm">Một tông giữa mặt</div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+<script>
+    Validator({
+        form: '#form-1',
+        formGroupSelector: '.form-group',
+        errorSelector: '.form-message',
+        rules: [
+            Validator.isRequired('#fullname', 'Vui lòng nhập tên đăng nhập'),
+            Validator.isRequired('#password', 'Vui lòng nhập mật khẩu'),
+            Validator.minLength('#password', 6, 'Mật khẩu phải có ít nhất 6 ký tự'),
+        ],
+        onSubmit: function (data) {
+            console.log('Dữ liệu gửi:', data);
+        }
+    });
+
+    function togglePasswords() {
+        const inputs = document.querySelectorAll('.password-input');
+        inputs.forEach(input => {
+            input.type = input.type === 'password' ? 'text' : 'password';
+        });
+    }
+
+</script>
+
+</html>

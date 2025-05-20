@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="./stl-fg-rg.css">
+<script src="./script.js"></script>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KMA recover</title>
+  <link rel="icon" type="image/png" href="https://actvn.edu.vn/Images/actvn_big_icon.png">
+</head>
+
+<body>
+  <div class="container">
+    <div class="left">
+    </div>
+    <form class="right" action="" id="form-3">
+      <div class="mg-t mg-b">
+        <img class="relay img-central "
+          src="https://cdn.haitrieu.com/wp-content/uploads/2021/10/Logo-Hoc-Vien-Ky-Thuat-Mat-Ma-ACTVN.png" alt="">
+      </div>
+      <div class="f-group">
+        <div class="boc-form">
+          <div class="tiltel">Đăng Ký </div>
+          <div class="form-group">
+            <input id="fullname" name="fullname" type="text" placeholder="" />
+            <label for="fullname">Tài khoản</label>
+            <span class="form-message"></span>
+          </div>
+          <div class="form-group">
+            <input class="password-input" name="password" id="password" type="password" placeholder="" />
+            <label for="password">Mật khẩu</label>
+            <span class="form-message"></span>
+          </div>
+          <div class="form-group">
+            <input class="password-input" id="repass" type="password" placeholder="" />
+            <label for="repass">Nhập lại mật khẩu</label>
+            <span class="form-message"></span>
+          </div>
+          <div class="form-group">
+            <input id="email" name="email" type="email" placeholder="" />
+            <label for="email">Email của bạn</label>
+            <span class="form-message"></span>
+          </div>
+          <div class="actions">
+            <label><input type="checkbox" class="toggle-password" onclick="togglePasswords()"> Hiển thị mật
+              khẩu</label>
+          </div>
+
+        </div>
+        <button type="submit" class="nop-dl">Submit</button>
+        <div class="lien-he">
+          <div class="b-lh">
+            <i class="fa-solid fa-headset lh-icon"></i>
+            <div class="lh-text">TƯ VẤN VÀ HỖ TRỢ</div>
+            <div class="sdt-lh">1900</div>
+            <div class="lh-textm">LIÊN HỆ ĐỂ ĐƯỢC HỖ TRỢ</div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</body>
+<script>
+  Validator({
+    form: '#form-3',
+    formGroupSelector: '.form-group',
+    errorSelector: '.form-message',
+    rules: [
+      Validator.isRequired('#fullname', 'Vui lòng nhập tên đăng nhập'),
+      Validator.isRequired('#password', 'Vui lòng nhập mật khẩu'),
+      Validator.minLength('#password', 6, 'Mật khẩu phải có ít nhất 6 ký tự'),
+      Validator.isRequired('#repass', "vui lòng nhập mật khẩu "),
+      Validator.idConfirmed('#repass', function () {
+        return document.querySelector('#form-3 #password').value;
+      }, 'Mật khẩu nhập lại không chính xác'),
+      Validator.isEmail("#email", "Email không hợp lệ")
+    ],
+    onSubmit: function (data) {
+      console.log('Dữ liệu gửi:', data);
+       alert("✅ Đăng nhập thành công!");
+    }
+  });
+
+
+  function togglePasswords() {
+    const inputs = document.querySelectorAll('.password-input');
+    inputs.forEach(input => {
+      input.type = input.type === 'password' ? 'text' : 'password';
+    });
+  }
+</script>
+
+</html>

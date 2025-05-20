@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+    border: none;
+  }
+
+  .left {
+    display: none; /* Ẩn ảnh nền ở mobile nếu cần */
+  }
+
+  .right {
+    width: 100%;
+    padding: 10px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"] {
+    width: 100%;
+    left: 0;
+    font-size: 16px;
+  }
+
+  button {
+    width: 100%;
+    left: 0;
+  }
+
+  .form-message {
+    margin-left: 0;
+  }
+
+  .lh-icon,
+  .lh-text,
+  .lh-textm,
+  .sdt-lh {
+    position: static;
+    text-align: center;
+    margin: 4px 0;
+  }
+}
+
+
+body {
+  background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20230526/pngtree-an-old-bookcase-in-a-library-image_2642908.jpg");
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(72, 95, 95);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.container {
+  display: flex;
+  background-color: rgb(253, 252, 252);
+  overflow: hidden;
+  max-width: 1283px;
+  width: 100%;
+  border-radius: 40px;
+  border: 8px solid #EADCCF;
+  animation: popup 0.5s ease-out;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: scale(0.5);
+  height: 608px;
+}
+
+.left {
+  flex: 1;
+  overflow: hidden;
+  background-image: url("./img/A\ vibrant\,\ animated\ scene\ showcasing\ the\ user\ interface\ of\ the\ KMA\ school\ English\ center\ management\ system\ app.\ The\ animation\ should\ focus\ on\ smooth\ transitions\ and\ intuiti.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -42px;
+}
+
+.left img {
+  transform: translate(-20%, 0px);
+  /* Dịch ảnh theo ý */
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.f-group {
+  height: 77%;
+}
+
+.mg-t {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mg-b {
+  margin-bottom: 20px;
+}
+
+.relay {
+  display: block;
+  max-width: 17%;
+  height: auto;
+  margin-top: 1px;
+}
+
+.tiltel {
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.boc-form {
+  background-color: rgb(253 253 253);
+  height: 77%;
+  box-shadow: 0px 1px 6px #9b9595;
+}
+
+/* Container cho input + label */
+.form-group {
+  position: relative;
+  margin-top: 1px;
+  padding-top: 8px;
+}
+
+/* Input field */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 632px;
+  padding: 12px 12px 12px 12px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 14px;
+  outline: none;
+  background: transparent;
+}
+
+/* Label nổi */
+.form-group label {
+  position: absolute;
+  top: 22px;
+  left: 20px;
+  background-color: white;
+  padding: 0 5px;
+  font-size: 16px;
+  color: #777;
+  transition: 0.2s ease all;
+  pointer-events: none;
+}
+
+/* Khi input được focus hoặc có nội dung */
+input:focus+label,
+input:not(:placeholder-shown)+label {
+  top: 5px;
+  left: 20px;
+  font-size: 12px;
+  color: #333;
+}
+
+.form-message {
+  color: #f33a58;
+  font-size: 14px;
+  min-height: 16px;
+  display: block;
+}
+
+.form-group.invalid .form-message {
+  color: #f33a58;
+}
+
+.nop-dl {
+  width: 165px;
+  padding: 7px;
+  border: 1px solid #160404;
+  border-radius: 20px;
+  position: relative;
+  left: 39%;
+  bottom: 12%;
+}
+
+.lien-he {
+  transform: translate(10px, -13px)
+}
+
+.nop-dl:hover {
+  cursor: pointer;
+  background-color: #e2dada;
+}
+
+.lh-text {
+  text-align: center;
+}
+
+.sdt-lh {
+  text-align: center;
+}
+
+.lh-textm {
+  text-align: center;
+}
