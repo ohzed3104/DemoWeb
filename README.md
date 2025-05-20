@@ -7,7 +7,7 @@ Giao diện người dùng cho hệ thống quản lý trung tâm tiếng Anh c�
 - Đăng ký tài khoản với xác nhận mật khẩu
 - Chức năng quên mật khẩu
 - Hiển thị/ẩn mật khẩu
-- Responsive nhẹ
+- Responsive nhẹ (nâng cấp hơn trong tương lai)
 - Thông báo kiểu alert trả data ở console
 - Giao diện hiện đại với floating label
 
