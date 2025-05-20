@@ -103,9 +103,10 @@
             Validator.minLength('#password', 6, 'Mật khẩu phải có ít nhất 6 ký tự'),
         ],
         onSubmit: function (data) {
-            console.log('Dữ liệu gửi:', data);
-        }
-    });
+      console.log('Dữ liệu gửi:', data);
+       alert("✅ Đăng nhập thành công!");
+    }
+  });
 
     function togglePasswords() {
         const inputs = document.querySelectorAll('.password-input');
