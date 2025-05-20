@@ -41,7 +41,7 @@
                         <label><input type="checkbox" class="toggle-password" onclick="togglePasswords()"> Hiển thị mật
                             khẩu</label>
                         <div class="right-option">
-                            <a href="/my-website/fg-pass.html">Quên mật khẩu</a>
+                            <a href="fg-pass.html">Quên mật khẩu</a>
                             <div class="span">|</div>
                             <a href="./register.html">Đăng ký</a>
                         </div>
@@ -102,7 +102,11 @@
             Validator.isRequired('#password', 'Vui lòng nhập mật khẩu'),
             Validator.minLength('#password', 6, 'Mật khẩu phải có ít nhất 6 ký tự'),
         ],
+<<<<<<< HEAD
         onSubmit: function (data) {
+=======
+       onSubmit: function (data) {
+>>>>>>> 0605b8c (link lai fg-html)
       console.log('Dữ liệu gửi:', data);
        alert("✅ Đăng nhập thành công!");
     }
